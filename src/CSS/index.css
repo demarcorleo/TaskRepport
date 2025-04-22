@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex; /* Coloca os elementos lado a lado */
+    gap: 20px; /* Espaçamento entre os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: flex-start; /* Alinha os elementos no topo */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
+    padding: 20px;
+    max-width: 1600px; /* Limita a largura máxima do container */
+    margin: 15%; /* Centraliza o container na página */
+}
+
+.container {
+    flex: 1; /* Faz com que as divs tenham tamanhos proporcionais */
+    min-width: 100px; /* Define um tamanho mínimo para as divs */
+    max-width: 250px; /* Define um tamanho máximo para as divs */
+    background-color: #eaeaea; /* Apenas para visualização */
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
