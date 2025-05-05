@@ -37,3 +37,55 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+.caixa-texto {
+    border: 1px solid #ccc; /* Borda base */
+    border-radius: 4px;
+    outline: none; /* Remove o contorno azul padrão */
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+
+.caixa-texto:hover {
+    border: 1px solid red; /* Adiciona uma borda vermelha ao passar o mouse */
+}
+
+.caixa-texto:focus {
+    border: 1px solid red; /* Adiciona uma borda vermelha ao foco */
+    box-shadow: 0 0 1px rgba(247, 0, 0, 0.7); /* Adiciona um contorno vermelho ao foco */
+}
+
+.radio-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border 0.2s;
+  }
+  
+  .radio-personalizado {
+    accent-color: red;
+  }
+  
+  /* Contorno vermelho ao focar */
+  .radio-personalizado:focus-visible + span,
+  .radio-personalizado:focus + span {
+    outline: none;
+  }
+  
+  .radio-personalizado:focus-visible {
+    outline: none;
+  }
+  
+  .radio-personalizado:focus {
+    outline: none;
+  }
+  
+  .radio-personalizado:focus-within,
+  .radio-wrapper:has(.radio-personalizado:focus) {
+    border: 1px solid red;
+  }
+  

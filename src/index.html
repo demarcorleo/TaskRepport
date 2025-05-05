@@ -13,32 +13,42 @@
         <div class="main-container">
             <div class="container">
                 <label for="tag">Tag:</label><br>
-                <input type="text" id="tag">
+                <input type="text" id="tag" class="caixa-texto" autofocus>
             </div>
 
             <div class="container">
                 <label for="report">Parte que falhou:</label><br>
-                <input type="text" id="report">
+                <input type="text" id="report" class="caixa-texto">
             </div>
 
             <div class="container">
                 <label for="data">Falha percebida:</label><br>
-                <input type="text" id="data">
+                <input type="text" id="data" class="caixa-texto">
             </div>
 
             <div class="container">
                 <label for="local">O que foi feito:</label><br>
-                <input type="text" id="local">
+                <input type="text" id="local" class="caixa-texto">
             </div>
 
             <div class="container">
-                <label for="stop">Gerou parada:</label><br>
-                <input type="text" id="stop">
-            </div>
+                <label>Gerou parada:</label><br>
+              
+                <label class="radio-wrapper">
+                  <input type="radio" name="gerou-parada" value="Sim" class="radio-personalizado">
+                  <span>Sim</span>
+                </label><br>
+              
+                <label class="radio-wrapper">
+                  <input type="radio" name="gerou-parada" value="Não" class="radio-personalizado">
+                  <span>Não</span>
+                </label><br>
+              </div>        
+                               
 
             <div class="container">
                 <label for="setor">Especialidade: </label><br>
-                <input type="text" id="setor">
+                <input type="text" id="setor" class="caixa-texto">
             </div>
         </div>
     </body>
