@@ -1,91 +1,101 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
 }
 
+/* Logo no canto superior esquerdo */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+
+/* Container principal do formulário */
 .main-container {
-    display: flex; /* Coloca os elementos lado a lado */
-    gap: 20px; /* Espaçamento entre os elementos */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: flex-start; /* Alinha os elementos no topo */
-    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
-    padding: 20px;
-    max-width: 1600px; /* Limita a largura máxima do container */
-    margin: 15%; /* Centraliza o container na página */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1600px;
+  margin: 350px auto 0 auto; /* centraliza horizontal e ajusta vertical */
 }
 
+/* Estilo de cada bloco do formulário */
 .container {
-    flex: 1; /* Faz com que as divs tenham tamanhos proporcionais */
-    min-width: 100px; /* Define um tamanho mínimo para as divs */
-    max-width: 250px; /* Define um tamanho máximo para as divs */
-    background-color: #eaeaea; /* Apenas para visualização */
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 100px;
+  max-width: 250px;
+  background-color: #eaeaea;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Inputs de texto */
 .caixa-texto {
-    border: 1px solid #ccc; /* Borda base */
-    border-radius: 4px;
-    outline: none; /* Remove o contorno azul padrão */
-    transition: border 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  margin-top: 5px;
 }
 
-
+/* Estilo ao interagir com o input */
 .caixa-texto:hover {
-    border: 1px solid red; /* Adiciona uma borda vermelha ao passar o mouse */
+  border: 1px solid red;
 }
-
 .caixa-texto:focus {
-    border: 1px solid red; /* Adiciona uma borda vermelha ao foco */
-    box-shadow: 0 0 1px rgba(247, 0, 0, 0.7); /* Adiciona um contorno vermelho ao foco */
+  border: 1px solid red;
+  box-shadow: 0 0 1px rgba(247, 0, 0, 0.7);
 }
 
+/* Estilo para manter o layout no mesmo container */
 .radio-wrapper {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 8px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: border 0.2s;
-  }
-  
-  .radio-personalizado {
-    accent-color: red;
-  }
-  
-  /* Contorno vermelho ao focar */
-  .radio-personalizado:focus-visible + span,
-  .radio-personalizado:focus + span {
-    outline: none;
-  }
-  
-  .radio-personalizado:focus-visible {
-    outline: none;
-  }
-  
-  .radio-personalizado:focus {
-    outline: none;
-  }
-  
-  .radio-personalizado:focus-within,
-  .radio-wrapper:has(.radio-personalizado:focus) {
-    border: 1px solid red;
-  }
-  
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border 0.2s;
+}
+
+#data-parada {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;  /* Garante que o campo ocupe toda a largura disponível */
+  padding-left: 10px; /* Ajuste de espaçamento entre o campo e os rádios */
+  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura total */
+}
+
+
+.radio-personalizado {
+  accent-color: red;
+}
+.radio-personalizado:focus-within,
+.radio-wrapper:has(.radio-personalizado:focus) {
+  border: 1px solid red;
+}
