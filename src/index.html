@@ -10,7 +10,30 @@
         <script src="./JS/script.js" async defer></script>
     </head>
     <body>
+        <div class="logo-container">
+            <div class="logo-wrapper">
+                <img src="./IMG/Logo.jpeg" alt="Logo" class="logo"> 
+            </div>
+        </div>
+
         <div class="main-container">
+            
+            <div class = "container">
+                <label for ="cia">Unidade:</label><br>
+                <input type="text" id="cia" class="caixa-texto" readonly placeholder="RIG-1">
+            </div>
+
+            <div class = "container">
+                <label for ="setor">Setor:</label><br>
+                <select id="setor" class="caixa-texto">
+                    <option value="1">150</option>
+                    <option value="2">120</option>
+                    <option value="3">100</option>
+                    <option value="4">90</option>
+                    <option value="5">50</option>
+                </select>
+            </div>
+
             <div class="container">
                 <label for="tag">Tag:</label><br>
                 <input type="text" id="tag" class="caixa-texto" autofocus>
@@ -33,22 +56,33 @@
 
             <div class="container">
                 <label>Gerou parada:</label><br>
-              
                 <label class="radio-wrapper">
-                  <input type="radio" name="gerou-parada" value="Sim" class="radio-personalizado">
-                  <span>Sim</span>
+                    <input type="radio" name="gerou-parada" value="Sim" class="radio-personalizado">
+                    <span>Sim</span>
                 </label><br>
-              
                 <label class="radio-wrapper">
-                  <input type="radio" name="gerou-parada" value="Não" class="radio-personalizado">
-                  <span>Não</span>
+                    <input type="radio" name="gerou-parada" value="Não" class="radio-personalizado">
+                    <span>Não</span>
                 </label><br>
-              </div>        
+            
+                <!-- Campo de data e hora dentro da mesma caixa -->
+                <div id="data-parada" style="display: none; margin-top: 10px;">
+                    <input type="datetime-local" id="dataParada" class="caixa-texto">
+                </div>
+            </div>
+            
+       
+             
+              
                                
-
             <div class="container">
-                <label for="setor">Especialidade: </label><br>
-                <input type="text" id="setor" class="caixa-texto">
+                <label for="especialidade">Especialidade: </label><br>
+                <select id="especialidade" class="caixa-texto">
+                    <option value="Operação">Operação</option>
+                    <option value="Elétrica">Elétrica</option>
+                    <option value="Mecânica">Mecânica</option>
+                    <option value="Qualidade">Qualidade</option>
+                    <option value="Pintura">Pintura</option>
             </div>
         </div>
     </body>
